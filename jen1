@@ -1,0 +1,9 @@
+stage("Deploy") {
+      when {
+        branch = 'dev'
+      }
+      steps {
+        sshagent([tomcat-new]) {
+          sh "scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@IP:/opt/tomcat8/webapp/"
+      }
+    }
