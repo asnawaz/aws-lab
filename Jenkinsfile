@@ -23,7 +23,8 @@ pipeline {
         sh "mv target/*.war target/myweb.war
       }
     }
-    stage("Build release") {
+   
+    stage("Push") {
       when {
         branch = 'dev'
       }
