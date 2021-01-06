@@ -42,7 +42,7 @@ resource "aws_instance" "public-ec2" {
     user_data = <<EOF
 #!/bin/sh
 sudo apt-get update
-sudo apt-get install -y mysql-client 
+sudo apt-get install -y mysql-client nginx
 EOF
 }
 
