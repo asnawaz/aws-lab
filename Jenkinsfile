@@ -11,7 +11,7 @@ pipeline {
         branch = 'dev'
       }
       steps {
-        git credentialsId 'github', url: 'https:github.com/asnawaz/aws-lab'
+        git branch: 'dev', credentialsId 'github', url: 'https:github.com/asnawaz/aws-lab'
       }
     }
     stage("Maven build") {
